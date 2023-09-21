@@ -8,18 +8,18 @@ As the data input we have an already found locations of startings of all palyndr
 ## Reading data
 From here we can see that in area around (90000, 95000) and (194000, 196000) we have big clusters of palindromes. This can be our places of interest to find the origin of replication. Also, we can notice a smaller but quite significant cluster around 75500.
 
-![](https://hackmd.io/_uploads/HJE0w2Y1p.png)
+![ac522a5e39dd06fb060125664ab2a3872ab6c32b](https://github.com/seoful/DNA-case-study/assets/34482712/5e93706a-1ff2-4613-95a7-a83b7af72201)
+
 
 ## Locations
 Here I generate 5 random samples of 296 numbers from uniform distribution to compare them with the CMV palindrome palindromes.
 
 I generated only 5 random samples because it is hard to visually compare things on a lot of graphs. And I did not use only one sample to have some difference and not get some deviated result just by chance. We always can rerun generation function and see plots with other generated data. We cannot just run the generator e.g. 1000 times and average the spacings because due to a uniform distribution which we take samples from the spacings tend to form just a straight line as well as counts and locations will become uniform.
 
+![7fbc9b67095b232e75326df49d53e5488265337b](https://github.com/seoful/DNA-case-study/assets/34482712/62bc3de2-a862-4fa1-839b-e42c50077b83)
 
-![](https://hackmd.io/_uploads/S1XGO3Yk6.png)
+![4ba04e1ca0c64a950d64e65c0720ea5167bd7c7e](https://github.com/seoful/DNA-case-study/assets/34482712/84bbf65d-d2ac-431f-b024-de7d9bb1bffc)
 
-
-![](https://hackmd.io/_uploads/BJCGu2KJa.png)
 
 ### Observations
 We can see that there is no much difference between CMV and random sample points locations and I cannot make inferences from these graphical representations only.
@@ -29,8 +29,8 @@ Let us analyze the spacings between the palyndromes from the input data and rand
 
 ```convolve_size``` variable is responsible for the numbers of neighboring spacings we sum. If it is set to 1, it is the same as simply calculate spacings on their own
 
+![80e2c11adb267b3450fe3a7062e76e0293127316-min](https://github.com/seoful/DNA-case-study/assets/34482712/e20418bd-7fc4-4ff6-9100-b8ac1efa133b)
 
-![](https://hackmd.io/_uploads/Skid52K1T.png)
 
 
 
@@ -41,7 +41,7 @@ We cannot see significant tendency in spacings above, as both random samples and
 Counts
 Here, we will divide the DNA into parts with equal length and count how many palyndromes we have in each part. Then, run tests to see if the CMV distribution is got by chance.
 
-![](https://hackmd.io/_uploads/BJfqOhF16.png)
+![edb3160c18448424ebff9504b905bc4c47854b1e](https://github.com/seoful/DNA-case-study/assets/34482712/7005a88f-b846-4942-916f-531221e49d70)
 
 
 Before we proceed splitting and running tests, we should tune the number of samples so that we balance between undetecting deviations due to low variance (big segments) and dividing clusters into different groups (small segments).
